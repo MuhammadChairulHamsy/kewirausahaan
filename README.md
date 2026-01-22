@@ -67,7 +67,7 @@ Website kuliner modern untuk **Dapur Nusantara**, menampilkan menu makanan tradi
    **Catatan: Jangan tutup terminal ini selama Anda melakukan perubahan kode agar file output.css terus diperbarui secara otomatis.**
 
 5. **Menjalankan di Browser**
-   1. Install Extension vscode "live server"
-   2. Klik kanan pada file index.html.
-   3. Pilih "Open with Live Server" atau klik tombol "Go Live" di pojok kanan bawah VS Code.
-   4. Browser akan terbuka otomatis di alamat http://127.0.0.1:5500.
+   - Install Extension vscode "live server"
+   - Klik kanan pada file index.html.
+   - Pilih "Open with Live Server" atau klik tombol "Go Live" di pojok kanan bawah VS Code.
+   - Browser akan terbuka otomatis di alamat http://127.0.0.1:5500.
