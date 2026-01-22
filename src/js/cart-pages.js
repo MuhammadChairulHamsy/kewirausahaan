@@ -74,11 +74,11 @@ function renderCart() {
                 <div class="text-primary font-bold mb-4 sm:mb-2">Rp ${item.price.toLocaleString("id-ID")}</div>
                 <div class="flex items-center justify-center sm:justify-start gap-4">
                     <div class="flex items-center bg-gray-100 rounded-xl p-1">
-                        <button onclick="updateQuantity(${item.id}, -1)" class="w-8 h-8 flex items-center justify-center rounded-lg hover:bg-white transition-colors">
+                        <button onclick="updateQuantity(${item.id}, -1)" class="w-8 h-8 flex items-center justify-center rounded-lg hover:bg-white transition-colors cursor-pointer">
                             <i class="fas fa-minus text-xs"></i>
                         </button>
                         <span class="w-10 text-center font-bold text-dark">${item.quantity}</span>
-                        <button onclick="updateQuantity(${item.id}, 1)" class="w-8 h-8 flex items-center justify-center rounded-lg hover:bg-white transition-colors">
+                        <button onclick="updateQuantity(${item.id}, 1)" class="w-8 h-8 flex items-center justify-center rounded-lg hover:bg-white transition-colors cursor-pointer">
                             <i class="fas fa-plus text-xs"></i>
                         </button>
                     </div>
@@ -88,7 +88,7 @@ function renderCart() {
                 <div class="text-xl font-black text-dark">
                     Rp ${(item.price * item.quantity).toLocaleString("id-ID")}
                 </div>
-                <button onclick="removeItem(${item.id})" class="text-red-500 hover:text-red-700 text-sm font-semibold flex items-center gap-2">
+                <button onclick="removeItem(${item.id})" class="text-red-500 hover:text-red-700 text-sm font-semibold flex items-center gap-2 cursor-pointer">
                     <i class="fas fa-trash-alt"></i> Hapus
                 </button>
             </div>
