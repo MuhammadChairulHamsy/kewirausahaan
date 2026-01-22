@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="id" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reservasi Meja - Dapur Nusantara</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&family=Playfair+Display:wght@700;900&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    
+    <link rel="stylesheet" href="../css/output.css" />
+</head>
+<body class="font-['Poppins'] text-dark bg-gray-50 overflow-x-hidden">
+
+    <header class="fixed w-full z-[1000] transition-all duration-300 shadow-sm bg-white" id="header">
+      <nav class="container mx-auto px-4 py-4 flex justify-between items-center">
+        <a href="../../index.html" class="flex items-center gap-2 text-2xl font-bold text-primary">
+          <i class="fas fa-utensils"></i>
+          <span class="font-['Playfair_Display'] text-dark">Dapur Nusantara</span>
+        </a>
+
+        <ul class="nav-menu hidden lg:flex items-center gap-8" id="navMenu">
+          <li><a href="../../index.html" class="hover:text-primary transition-colors">Beranda</a></li>
+          <li><a href="./menu.html" class="hover:text-primary transition-colors">Menu</a></li>
+          <li><a href="./about.html" class="hover:text-primary transition-colors">Tentang</a></li>
+          <li><a href="./contact.html" class="hover:text-primary transition-colors">Kontak</a></li>
+          <li>
+            <a href="./booking.html" class="px-6 py-2 bg-primary text-white rounded-full transition-all shadow-md font-semibold">
+              Reservasi
+            </a>
+          </li>
+        </ul>
+
+        <div class="flex items-center gap-5">
+          <a href="./cart.html" class="relative text-xl hover:text-primary transition">
+            <i class="fas fa-shopping-cart"></i>
+            <span class="absolute -top-2 -right-2 bg-secondary text-dark text-[10px] font-bold px-1.5 rounded-full">0</span>
+          </a>
+          <button id="menuToggle" class="lg:hidden text-2xl focus:outline-none">
+            <i class="fas fa-bars"></i>
+          </button>
+        </div>
+      </nav>
+    </header>
+
+    <section class="pt-32 pb-16 bg-white border-b border-gray-100">
+        <div class="container mx-auto px-4">
+            <div class="flex flex-col items-center text-center">
+                <span class="bg-primary/10 text-primary px-4 py-1 rounded-full text-sm font-bold mb-4 uppercase tracking-widest">Aman & Cepat</span>
+                <h1 class="text-4xl md:text-5xl font-['Playfair_Display'] font-black text-dark mb-4">📅 Reservasi Meja</h1>
+                <nav class="flex gap-2 text-sm text-gray-400 font-medium">
+                    <a href="../../index.html" class="hover:text-primary">Beranda</a>
+                    <span>/</span>
+                    <span class="text-primary">Reservasi</span>
+                </nav>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-20">
+        <div class="container mx-auto px-4">
+            <div class="flex flex-col lg:flex-row gap-12">
+                
+                <div class="lg:w-2/3 bg-white p-8 md:p-12 rounded-[2rem] shadow-xl shadow-gray-200/50">
+                    <h2 class="text-3xl font-['Playfair_Display'] font-bold text-dark mb-4">Form Reservasi</h2>
+                    <p class="text-gray-500 mb-10">Silakan lengkapi detail di bawah. Kami akan mengonfirmasi pesanan Anda maksimal dalam 30 menit melalui WhatsApp.</p>
+                    
+                    <form id="bookingForm" class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <div class="space-y-2">
+                            <label class="text-sm font-bold text-dark flex items-center gap-2">
+                                Nama Lengkap <span class="text-red-500">*</span>
+                            </label>
+                            <input type="text" required placeholder="Contoh: Budi Santoso" 
+                                class="w-full px-5 py-4 bg-gray-50 border border-gray-100 rounded-2xl focus:ring-2 focus:ring-primary/20 focus:border-primary outline-none transition-all">
+                        </div>
+
+                        <div class="space-y-2">
+                            <label class="text-sm font-bold text-dark flex items-center gap-2">
+                                Nomor WhatsApp <span class="text-red-500">*</span>
+                            </label>
+                            <input type="tel" required placeholder="0812xxxx" 
+                                class="w-full px-5 py-4 bg-gray-50 border border-gray-100 rounded-2xl focus:ring-2 focus:ring-primary/20 focus:border-primary outline-none transition-all">
+                        </div>
+
+                        <div class="space-y-2">
+                            <label class="text-sm font-bold text-dark">Tanggal Kedatangan <span class="text-red-500">*</span></label>
+                            <input type="date" required 
+                                class="w-full px-5 py-4 bg-gray-50 border border-gray-100 rounded-2xl focus:ring-2 focus:ring-primary/20 focus:border-primary outline-none transition-all">
+                        </div>
+
+                        <div class="space-y-2">
+                            <label class="text-sm font-bold text-dark">Waktu <span class="text-red-500">*</span></label>
+                            <select required class="w-full px-5 py-4 bg-gray-50 border border-gray-100 rounded-2xl focus:ring-2 focus:ring-primary/20 focus:border-primary outline-none transition-all appearance-none cursor-pointer">
+                                <option value="">Pilih Jam</option>
+                                <option>11:00 WIB</option>
+                                <option>13:00 WIB</option>
+                                <option>18:00 WIB</option>
+                                <option>20:00 WIB</option>
+                            </select>
+                        </div>
+
+                        <div class="space-y-2">
+                            <label class="text-sm font-bold text-dark">Jumlah Tamu <span class="text-red-500">*</span></label>
+                            <select required class="w-full px-5 py-4 bg-gray-50 border border-gray-100 rounded-2xl focus:ring-2 focus:ring-primary/20 focus:border-primary outline-none transition-all appearance-none cursor-pointer">
+                                <option value="">Pilih Kapasitas</option>
+                                <option>1 - 2 Orang</option>
+                                <option>3 - 5 Orang</option>
+                                <option>6 - 10 Orang</option>
+                                <option>Lebih dari 10 Orang</option>
+                            </select>
+                        </div>
+
+                        <div class="space-y-2">
+                            <label class="text-sm font-bold text-dark">Tipe Acara (Opsional)</label>
+                            <select class="w-full px-5 py-4 bg-gray-50 border border-gray-100 rounded-2xl focus:ring-2 focus:ring-primary/20 focus:border-primary outline-none transition-all appearance-none cursor-pointer">
+                                <option value="">Pilih Acara</option>
+                                <option>Ulang Tahun</option>
+                                <option>Kumpul Keluarga</option>
+                                <option>Pertemuan Bisnis</option>
+                            </select>
+                        </div>
+
+                        <div class="md:col-span-2 space-y-2">
+                            <label class="text-sm font-bold text-dark">Catatan Tambahan</label>
+                            <textarea rows="4" placeholder="Contoh: Kursi bayi, alergi kacang, atau posisi meja dekat jendela." 
+                                class="w-full px-5 py-4 bg-gray-50 border border-gray-100 rounded-2xl focus:ring-2 focus:ring-primary/20 focus:border-primary outline-none transition-all"></textarea>
+                        </div>
+
+                        <div class="md:col-span-2 pt-4">
+                            <button type="submit" class="w-full py-5 bg-primary text-white rounded-2xl font-bold text-lg hover:bg-dark shadow-lg shadow-primary/20 transition-all flex items-center justify-center gap-3">
+                                <i class="fas fa-calendar-check"></i>
+                                Kirim Reservasi Sekarang
+                            </button>
+                        </div>
+                    </form>
+                </div>
+
+                <div class="lg:w-1/3 space-y-8">
+                    <div class="bg-dark text-white p-10 rounded-[2rem] relative overflow-hidden shadow-2xl">
+                        <div class="relative z-10">
+                            <h3 class="text-2xl font-bold mb-8 flex items-center gap-3 text-secondary">
+                                <i class="fas fa-info-circle text-xl"></i>
+                                Info Penting
+                            </h3>
+                            
+                            <div class="space-y-8">
+                                <div class="flex gap-5">
+                                    <div class="w-12 h-12 bg-white/10 rounded-xl flex items-center justify-center shrink-0">
+                                        <i class="fas fa-clock text-secondary"></i>
+                                    </div>
+                                    <div>
+                                        <h4 class="font-bold mb-1">Jam Operasional</h4>
+                                        <p class="text-sm text-gray-400">Setiap Hari<br>08:00 - 20:00 WIB</p>
+                                    </div>
+                                </div>
+
+                                <div class="flex gap-5">
+                                    <div class="w-12 h-12 bg-white/10 rounded-xl flex items-center justify-center shrink-0">
+                                        <i class="fas fa-calendar-alt text-secondary"></i>
+                                    </div>
+                                    <div>
+                                        <h4 class="font-bold mb-1">Pemesanan H-1</h4>
+                                        <p class="text-sm text-gray-400">Direkomendasikan pesan 24 jam sebelumnya.</p>
+                                    </div>
+                                </div>
+
+                                <div class="flex gap-5">
+                                    <div class="w-12 h-12 bg-white/10 rounded-xl flex items-center justify-center shrink-0">
+                                        <i class="fas fa-shield-alt text-secondary"></i>
+                                    </div>
+                                    <div>
+                                        <h4 class="font-bold mb-1">Kebijakan</h4>
+                                        <p class="text-sm text-gray-400">Gratis pembatalan 3 jam sebelum waktu tiba.</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <hr class="my-10 border-white/10">
+
+                            <h4 class="font-bold mb-4">Butuh bantuan cepat?</h4>
+                            <div class="flex flex-col gap-3">
+                                <a href="#" class="bg-secondary text-dark px-6 py-4 rounded-2xl font-bold text-center hover:brightness-110 transition flex items-center justify-center gap-2">
+                                    <i class="fab fa-whatsapp text-lg"></i> Hubungi WhatsApp
+                                </a>
+                                <a href="#" class="border border-white/20 text-white px-6 py-4 rounded-2xl font-bold text-center hover:bg-white/5 transition">
+                                    <i class="fas fa-phone-alt mr-2 text-sm"></i> 0811-1111-1111
+                                </a>
+                            </div>
+                        </div>
+                        <div class="absolute inset-0 opacity-5 pointer-events-none">
+                            <img src="https://www.transparenttextures.com/patterns/batik-fractal.png" class="w-full h-full object-cover">
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <div id="successModal" class="fixed inset-0 z-[2000] flex items-center justify-center p-4 opacity-0 invisible transition-all duration-300">
+        <div class="absolute inset-0 bg-dark/60 backdrop-blur-sm"></div>
+        <div class="bg-white rounded-[2.5rem] p-10 max-w-md w-full relative z-10 text-center shadow-2xl">
+            <div class="w-20 h-20 bg-green-100 text-green-500 rounded-full flex items-center justify-center text-4xl mx-auto mb-6">
+                <i class="fas fa-check-circle"></i>
+            </div>
+            <h2 class="text-2xl font-bold text-dark mb-4">Reservasi Berhasil!</h2>
+            <p class="text-gray-500 mb-8 leading-relaxed">Terima kasih. Kami telah menerima data Anda. Mohon tunggu pesan konfirmasi kami melalui WhatsApp.</p>
+            <button onclick="toggleModal(false)" class="w-full py-4 bg-primary text-white rounded-2xl font-bold hover:bg-dark transition-all shadow-lg">
+                Selesai
+            </button>
+        </div>
+    </div>
+
+    <footer class="bg-dark text-gray-400 pt-20 pb-10">
+      <div class="container mx-auto px-4">
+        <div class="pt-10 border-t border-white/5 text-center text-sm">
+          <p>&copy; 2026 Dapur Nusantara. Dibuat dengan ❤️ untuk Indonesia</p>
+        </div>
+      </div>
+    </footer>
+
+     <script src="../js/main.js"></script>
+    <script src="../js/booking.js"></script>
+
+</body>
+</html>

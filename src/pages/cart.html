@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="id" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Keranjang Belanja - Dapur Nusantara</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&family=Playfair+Display:wght@700;900&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    
+   <link rel="stylesheet" href="../css/output.css" />
+</head>
+<body class="font-['Poppins'] text-dark bg-gray-50 overflow-x-hidden">
+
+    <header class="fixed w-full z-[1000] transition-all duration-300 shadow-sm bg-white" id="header">
+      <nav class="container mx-auto px-4 py-4 flex justify-between items-center">
+        <a href="../index.html" class="flex items-center gap-2 text-2xl font-bold text-primary">
+          <i class="fas fa-utensils"></i>
+          <span class="font-['Playfair_Display'] text-dark">Dapur Nusantara</span>
+        </a>
+
+        <ul class="nav-menu hidden lg:flex items-center gap-8 font-medium" id="navMenu">
+          <li><a href="../../index.html" class="hover:text-primary transition-colors">Beranda</a></li>
+          <li><a href="./menu.html" class="hover:text-primary transition-colors">Menu</a></li>
+          <li><a href="./about.html" class="hover:text-primary transition-colors">Tentang</a></li>
+          <li><a href="./contact.html" class="hover:text-primary transition-colors">Kontak</a></li>
+          <li>
+            <a href="./booking.html" class="px-6 py-2 bg-primary text-white rounded-full transition-all shadow-md font-semibold hover:bg-dark">
+              Reservasi
+            </a>
+          </li>
+        </ul>
+
+        <div class="flex items-center gap-5">
+          <div class="relative group">
+            <button class="text-xl text-dark hover:text-primary transition-colors relative">
+              <i class="fas fa-shopping-cart"></i>
+              <span class="absolute -top-2 -right-2 bg-primary text-white text-[10px] w-4 h-4 rounded-full flex items-center justify-center font-bold cart-count">0</span>
+            </button>
+          </div>
+          <button id="menuToggle" class="lg:hidden text-2xl"><i class="fas fa-bars"></i></button>
+        </div>
+      </nav>
+    </header>
+
+    <section class="pt-32 pb-12 bg-white">
+        <div class="container mx-auto px-4">
+            <h1 class="text-3xl md:text-4xl font-['Playfair_Display'] font-black text-dark mb-2">Keranjang Belanja</h1>
+            <p class="text-gray-400 text-sm">Tinjau pesanan Anda sebelum melakukan pembayaran.</p>
+        </div>
+    </section>
+
+    <section class="pb-24">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+                
+                <div class="lg:col-span-8 space-y-4">
+                    <div class="bg-white rounded-[2rem] shadow-sm border border-gray-100 overflow-hidden">
+                        <div class="p-6 border-b border-gray-50 flex justify-between items-center bg-gray-50/50">
+                            <h2 class="font-bold text-dark flex items-center gap-2">
+                                <i class="fas fa-shopping-basket text-primary"></i>
+                                Item Pesanan (<span id="itemCount">0</span>)
+                            </h2>
+                            <button id="clearCartBtn" class="text-xs font-bold text-red-500 hover:text-red-700 transition-colors uppercase tracking-wider">
+                                <i class="fas fa-trash-alt mr-1"></i> Kosongkan
+                            </button>
+                        </div>
+
+                        <div id="cartItemsContainer" class="divide-y divide-gray-100 p-6 min-h-[300px]">
+                            <div class="text-center py-12">
+                                <div class="w-20 h-20 bg-gray-50 rounded-full flex items-center justify-center mx-auto mb-4">
+                                    <i class="fas fa-shopping-cart text-gray-300 text-3xl"></i>
+                                </div>
+                                <p class="text-gray-400 mb-6">Keranjang Anda masih kosong</p>
+                                <a href="./menu.html" class="inline-flex items-center gap-2 bg-primary text-white px-8 py-3 rounded-xl font-bold hover:bg-dark transition-all">
+                                    Mulai Pesan Menu
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <a href="./menu.html" class="inline-flex items-center gap-2 text-sm font-bold text-gray-400 hover:text-primary transition-colors ml-4">
+                        <i class="fas fa-arrow-left"></i>
+                        Kembali Tambah Menu
+                    </a>
+                </div>
+
+                <div class="lg:col-span-4 sticky top-28">
+                    <div class="bg-white rounded-[2rem] shadow-xl shadow-gray-200/50 border border-gray-100 p-8">
+                        <h2 class="text-xl font-bold text-dark mb-6">Ringkasan Pesanan</h2>
+                        
+                        <div class="space-y-4 mb-8">
+                            <div class="flex justify-between text-gray-500">
+                                <span>Subtotal</span>
+                                <span id="subtotal" class="font-semibold text-dark">Rp 0</span>
+                            </div>
+                            <div class="flex justify-between text-gray-500">
+                                <span>Pajak Resto (10%)</span>
+                                <span id="tax" class="font-semibold text-dark">Rp 0</span>
+                            </div>
+                            <div class="flex justify-between text-gray-500">
+                                <span>Biaya Pengiriman</span>
+                                <span id="shipping" class="font-semibold text-dark">Rp 15.000</span>
+                            </div>
+                            <div class="pt-4 border-t border-dashed border-gray-200 flex justify-between items-center">
+                                <span class="font-bold text-dark text-lg">Total Bayar</span>
+                                <span id="total" class="text-2xl font-black text-primary">Rp 0</span>
+                            </div>
+                        </div>
+
+                        <div class="mb-8">
+                            <label class="block text-xs font-bold text-dark uppercase tracking-widest mb-3 ml-1">Punya Kode Promo?</label>
+                            <div class="flex gap-2">
+                                <input type="text" id="promoInput" placeholder="KODEPROMO" class="flex-1 px-4 py-3 bg-gray-50 border border-gray-100 rounded-xl outline-none focus:ring-2 focus:ring-primary/20 text-sm font-bold uppercase">
+                                <button id="applyPromoBtn" class="bg-dark text-white px-4 py-3 rounded-xl font-bold text-xs hover:bg-primary transition-all">PAKAI</button>
+                            </div>
+                            <p id="promoMessage" class="mt-2 text-[10px] font-medium italic"></p>
+                        </div>
+
+                        <button id="checkoutBtn" class="w-full bg-primary text-white font-bold py-5 rounded-2xl hover:bg-dark transition-all shadow-lg shadow-primary/20 flex items-center justify-center gap-3 active:scale-95">
+                            <i class="fas fa-lock text-sm"></i>
+                            Bayar Sekarang
+                        </button>
+
+                        <div class="mt-6 flex items-center justify-center gap-4 grayscale opacity-50">
+                            <i class="fab fa-cc-visa text-2xl"></i>
+                            <i class="fab fa-cc-mastercard text-2xl"></i>
+                            <i class="fas fa-wallet text-2xl"></i>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <div id="successModal" class="fixed inset-0 z-[2000] flex items-center justify-center p-4 hidden">
+        <div class="absolute inset-0 bg-dark/60 backdrop-blur-sm"></div>
+        <div class="bg-white rounded-[2.5rem] p-10 max-w-sm w-full relative z-10 text-center shadow-2xl animate-in fade-in zoom-in duration-300">
+            <div class="w-20 h-20 bg-green-100 text-green-500 rounded-full flex items-center justify-center mx-auto mb-6 text-3xl">
+                <i class="fas fa-check-circle"></i>
+            </div>
+            <h2 class="text-2xl font-black text-dark mb-2">Pesanan Diterima!</h2>
+            <p class="text-gray-400 text-sm mb-8">Koki kami sedang menyiapkan hidangan spesial Anda. Mohon tunggu sebentar!</p>
+            <div class="space-y-3">
+                <a href="./menu.html" class="block w-full bg-primary text-white font-bold py-4 rounded-xl hover:bg-dark transition-all">Pesan Lagi</a>
+                <a href="../../index.html" class="block w-full text-gray-400 font-bold py-2 text-sm">Ke Beranda</a>
+            </div>
+        </div>
+    </div>
+
+    <footer class="bg-white py-10 border-t border-gray-100">
+        <div class="container mx-auto px-4 text-center">
+            <p class="text-gray-400 text-xs font-medium uppercase tracking-widest italic">© 2026 Dapur Nusantara • Kelezatan yang Aman & Terpercaya</p>
+        </div>
+    </footer>
+
+    <script src="../js/main.js"></script>
+    <script src="../js/cart-pages.js"></script>
+</body>
+</html>

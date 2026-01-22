@@ -1,0 +1,397 @@
+<!doctype html>
+<html lang="id" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tentang Kami - Dapur Nusantara</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&family=Playfair+Display:wght@700;900&display=swap"
+      rel="stylesheet"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
+
+    <link rel="stylesheet" href="../css/output.css" />
+  </head>
+  <body class="font-['Poppins'] text-dark bg-gray-50 overflow-x-hidden">
+    <header
+      class="fixed w-full z-[1000] transition-all duration-300 shadow-sm bg-white"
+      id="header"
+    >
+      <nav
+        class="container mx-auto px-4 py-4 flex justify-between items-center"
+      >
+        <a
+          href="../index.html"
+          class="flex items-center gap-2 text-2xl font-bold text-primary"
+        >
+          <i class="fas fa-utensils"></i>
+          <span class="font-['Playfair_Display'] text-dark"
+            >Dapur Nusantara</span
+          >
+        </a>
+
+        <ul class="nav-menu hidden lg:flex items-center gap-8" id="navMenu">
+          <li>
+            <a
+              href="../../index.html"
+              class="hover:text-primary transition-colors"
+              >Beranda</a
+            >
+          </li>
+          <li>
+            <a href="./menu.html" class="hover:text-primary transition-colors"
+              >Menu</a
+            >
+          </li>
+          <li>
+            <a href="./about.html" class="font-semibold text-primary"
+              >Tentang</a
+            >
+          </li>
+          <li>
+            <a
+              href="./contact.html"
+              class="hover:text-primary transition-colors"
+              >Kontak</a
+            >
+          </li>
+          <li>
+            <a
+              href="./booking.html"
+              class="px-6 py-2 bg-primary text-white rounded-full hover:bg-dark transition-all shadow-md"
+            >
+              Reservasi
+            </a>
+          </li>
+        </ul>
+
+        <div class="flex items-center gap-5">
+          <a
+            href="./cart.html"
+            class="relative text-xl hover:text-primary transition"
+          >
+            <i class="fas fa-shopping-cart"></i>
+            <span
+              class="absolute -top-2 -right-2 bg-secondary text-dark text-[10px] font-bold px-1.5 rounded-full"
+              >0</span
+            >
+          </a>
+          <button
+            id="menuToggle"
+            class="lg:hidden text-2xl focus:outline-none cursor-pointer"
+          >
+            <i class="fas fa-bars"></i>
+          </button>
+        </div>
+      </nav>
+    </header>
+
+    <section
+      class="pt-32 pb-20 bg-primary text-white text-center relative overflow-hidden"
+    >
+      <div class="container mx-auto px-4 relative z-10">
+        <h1
+          class="text-4xl md:text-6xl font-['Playfair_Display'] font-black mb-6 animate-fade-up"
+        >
+          Tentang Dapur Nusantara
+        </h1>
+        <p
+          class="text-lg md:text-xl max-w-2xl mx-auto opacity-90 leading-relaxed animate-fade-up"
+        >
+          Melestarikan cita rasa tradisional Indonesia dengan sentuhan modern
+          untuk setiap generasi.
+        </p>
+      </div>
+      <div
+        class="absolute -top-20 -right-20 w-64 h-64 bg-white/10 rounded-full"
+      ></div>
+    </section>
+
+    <section class="py-24 bg-white">
+      <div class="container mx-auto px-4">
+        <div class="flex flex-col lg:flex-row items-center gap-16">
+          <div class="lg:w-1/2 animate-on-scroll">
+            <div class="relative group">
+              <img
+                src="../assets/images/Pendiri.jpg"
+                alt="Cerita Kami"
+                class="rounded-3xl shadow-2xl w-full h-[500px] object-cover"
+              />
+              <div
+                class="absolute inset-0 rounded-3xl border-2 border-primary/20 translate-x-4 translate-y-4 -z-10 group-hover:translate-x-6 group-hover:translate-y-6 transition-transform"
+              ></div>
+            </div>
+          </div>
+          <div class="lg:w-1/2 animate-on-scroll">
+            <span
+              class="text-primary font-bold tracking-widest uppercase text-sm italic"
+              >Sejarah Kami</span
+            >
+            <h2
+              class="text-4xl font-['Playfair_Display'] font-bold mt-4 mb-8 text-dark leading-tight"
+            >
+              Cerita Kami
+            </h2>
+            <div class="space-y-6 text-gray-600 leading-relaxed text-lg">
+              <p>
+                Dapur Nusantara merupakan UMKM kuliner yang lahir dari kecintaan
+                terhadap masakan rumahan khas Indonesia. Kami hadir dengan visi
+                sederhana, yaitu menghadirkan cita rasa autentik masakan
+                Indonesia ke setiap meja makan.
+              </p>
+              <p>
+                Berawal dari dapur rumahan, kami mengolah setiap hidangan
+                menggunakan resep keluarga yang dijaga dengan penuh perhatian,
+                serta bahan-bahan segar pilihan untuk menjaga kualitas dan rasa.
+              </p>
+              <p>
+                Dengan semangat belajar dan berkembang, kami terus berinovasi
+                dalam penyajian tanpa meninggalkan cita rasa tradisional, agar
+                setiap hidangan dapat dinikmati dengan rasa hangat layaknya
+                masakan rumah.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="py-24 bg-gray-100">
+      <div class="container mx-auto px-4">
+        <div class="text-center mb-16 animate-on-scroll">
+          <span class="text-primary font-bold uppercase tracking-widest text-sm"
+            >Nilai Kami</span
+          >
+          <h2 class="text-4xl font-['Playfair_Display'] font-bold mt-2">
+            Komitmen Kami untuk Anda
+          </h2>
+          <div class="w-20 h-1 bg-secondary mx-auto mt-4"></div>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div
+            class="bg-white p-10 rounded-3xl shadow-xl text-center hover:-translate-y-3 transition-all duration-300 animate-on-scroll border-t-4 border-primary"
+          >
+            <div
+              class="w-20 h-20 bg-primary/10 text-primary rounded-full flex items-center justify-center text-3xl mx-auto mb-6"
+            >
+              <i class="fas fa-certificate"></i>
+            </div>
+            <h3 class="text-xl font-bold mb-4">Kualitas Terjamin</h3>
+            <p class="text-gray-500 text-sm">
+              Menggunakan bahan pilihan terbaik dan bersertifikat halal MUI.
+            </p>
+          </div>
+
+          <div
+            class="bg-white p-10 rounded-3xl shadow-xl text-center hover:-translate-y-3 transition-all duration-300 animate-on-scroll border-t-4 border-secondary"
+          >
+            <div
+              class="w-20 h-20 bg-secondary/10 text-secondary rounded-full flex items-center justify-center text-3xl mx-auto mb-6"
+            >
+              <i class="fas fa-heart"></i>
+            </div>
+            <h3 class="text-xl font-bold mb-4">Dibuat dengan Cinta</h3>
+            <p class="text-gray-500 text-sm">
+              Setiap hidangan dimasak dengan penuh perhatian dan kasih sayang.
+            </p>
+          </div>
+
+          <div
+            class="bg-white p-10 rounded-3xl shadow-xl text-center hover:-translate-y-3 transition-all duration-300 animate-on-scroll border-t-4 border-primary"
+          >
+            <div
+              class="w-20 h-20 bg-primary/10 text-primary rounded-full flex items-center justify-center text-3xl mx-auto mb-6"
+            >
+              <i class="fas fa-leaf"></i>
+            </div>
+            <h3 class="text-xl font-bold mb-4">Bahan Segar</h3>
+            <p class="text-gray-500 text-sm">
+              Bahan-bahan segar dipilih setiap hari dari supplier terpercaya.
+            </p>
+          </div>
+
+          <div
+            class="bg-white p-10 rounded-3xl shadow-xl text-center hover:-translate-y-3 transition-all duration-300 animate-on-scroll border-t-4 border-secondary"
+          >
+            <div
+              class="w-20 h-20 bg-secondary/10 text-secondary rounded-full flex items-center justify-center text-3xl mx-auto mb-6"
+            >
+              <i class="fas fa-smile"></i>
+            </div>
+            <h3 class="text-xl font-bold mb-4">Kepuasan Pelanggan</h3>
+            <p class="text-gray-500 text-sm">
+              Prioritas utama kami adalah kepuasan dan kebahagiaan Anda.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="py-20 bg-dark text-white relative overflow-hidden">
+      <div class="container mx-auto px-4 relative z-10">
+        <div class="grid grid-cols-2 lg:grid-cols-4 gap-12 text-center">
+          <div class="animate-on-scroll">
+            <div
+              class="text-5xl font-['Playfair_Display'] font-black text-secondary mb-2"
+            >
+              15+
+            </div>
+            <div
+              class="text-gray-400 uppercase tracking-widest text-xs font-bold"
+            >
+              Tahun Berpengalaman
+            </div>
+          </div>
+          <div class="animate-on-scroll">
+            <div
+              class="text-5xl font-['Playfair_Display'] font-black text-secondary mb-2"
+            >
+              50+
+            </div>
+            <div
+              class="text-gray-400 uppercase tracking-widest text-xs font-bold"
+            >
+              Menu Spesial
+            </div>
+          </div>
+          <div class="animate-on-scroll">
+            <div
+              class="text-5xl font-['Playfair_Display'] font-black text-secondary mb-2"
+            >
+              10K+
+            </div>
+            <div
+              class="text-gray-400 uppercase tracking-widest text-xs font-bold"
+            >
+              Pelanggan Puas
+            </div>
+          </div>
+          <div class="animate-on-scroll">
+            <div
+              class="text-5xl font-['Playfair_Display'] font-black text-secondary mb-2"
+            >
+              4.8
+            </div>
+            <div
+              class="text-gray-400 uppercase tracking-widest text-xs font-bold"
+            >
+              Rating Rata-rata
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="absolute inset-0 opacity-10">
+        <img
+          src="https://www.transparenttextures.com/patterns/batik-fractal.png"
+          class="w-full h-full object-repeat"
+        />
+      </div>
+    </section>
+
+    <footer class="bg-dark text-gray-400 pt-20 pb-10">
+      <div class="container mx-auto px-4">
+        <div
+          class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-20"
+        >
+          <div>
+            <a
+              href="#"
+              class="flex items-center gap-2 text-2xl font-bold text-primary mb-8"
+            >
+              <i class="fas fa-utensils text-secondary"></i>
+              <span class="text-white font-['Playfair_Display']"
+                >Dapur Nusantara</span
+              >
+            </a>
+            <p class="leading-relaxed mb-8">
+              Menyajikan makanan rumahan dengan cita rasa autentik khas
+              Indonesia.
+            </p>
+            <div class="flex gap-4">
+              <a
+                href="#"
+                class="w-10 h-10 bg-white/5 rounded-full flex items-center justify-center hover:bg-primary transition-all"
+                ><i class="fab fa-facebook-f text-white"></i
+              ></a>
+              <a
+                href="#"
+                class="w-10 h-10 bg-white/5 rounded-full flex items-center justify-center hover:bg-primary transition-all"
+                ><i class="fab fa-instagram text-white"></i
+              ></a>
+              <a
+                href="#"
+                class="w-10 h-10 bg-white/5 rounded-full flex items-center justify-center hover:bg-primary transition-all"
+                ><i class="fab fa-whatsapp text-white"></i
+              ></a>
+            </div>
+          </div>
+          <div>
+            <h3 class="text-white text-lg font-bold mb-8">Tautan Cepat</h3>
+            <ul class="space-y-4">
+              <li>
+                <a href="../../index.html" class="hover:text-primary transition"
+                  >Beranda</a
+                >
+              </li>
+              <li>
+                <a href="./menu.html" class="hover:text-primary transition"
+                  >Menu</a
+                >
+              </li>
+              <li>
+                <a href="./about.html" class="hover:text-primary transition"
+                  >Tentang Kami</a
+                >
+              </li>
+              <li>
+                <a href="./contact.html" class="hover:text-primary transition"
+                  >Kontak</a
+                >
+              </li>
+            </ul>
+          </div>
+          <div>
+            <h3 class="text-white text-lg font-bold mb-8">Kontak</h3>
+            <ul class="space-y-4 text-sm leading-relaxed">
+              <li class="flex gap-3">
+                <i class="fas fa-map-marker-alt text-secondary"></i> Binjai,
+                Sumatera Utara
+              </li>
+              <li class="flex gap-3">
+                <i class="fas fa-phone text-secondary"></i> 0811-1111-1111
+              </li>
+              <li class="flex gap-3">
+                <i class="fas fa-envelope text-secondary"></i>
+                UMKM@dapurnusantara.com
+              </li>
+            </ul>
+          </div>
+          <div>
+            <h3 class="text-white text-lg font-bold mb-8">Jam Operasional</h3>
+            <p class="text-sm">Senin - Minggu<br />08:00 - 20:00 WIB</p>
+          </div>
+        </div>
+        <div class="pt-10 border-t border-white/5 text-center text-sm">
+          <p>&copy; 2026 Dapur Nusantara. Melestarikan Tradisi Kuliner.</p>
+        </div>
+      </div>
+    </footer>
+
+    <button
+      id="scrollTop"
+      class="fixed bottom-8 right-8 w-14 h-14 bg-primary text-white rounded-full shadow-2xl flex items-center justify-center opacity-0 invisible translate-y-10 transition-all duration-300 z-[999] hover:-translate-y-2 cursor-pointer"
+    >
+      <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <script src="../js/main.js"></script>
+  </body>
+</html>

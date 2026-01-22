@@ -1,0 +1,383 @@
+<!doctype html>
+<html lang="id" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Daftar Menu - Dapur Nusantara</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&family=Playfair+Display:wght@700;900&display=swap"
+      rel="stylesheet"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
+
+    <link rel="stylesheet" href="../css/output.css" />
+  </head>
+  <body class="font-['Poppins'] text-dark bg-gray-50 overflow-x-hidden">
+    <header
+      class="fixed w-full z-[1000] transition-all duration-300 shadow-sm bg-white"
+      id="header"
+    >
+      <nav
+        class="container mx-auto px-4 py-4 flex justify-between items-center"
+      >
+        <a
+          href="../../index.html"
+          class="flex items-center gap-2 text-2xl font-bold text-primary"
+        >
+          <i class="fas fa-utensils"></i>
+          <span class="font-['Playfair_Display'] text-dark"
+            >Dapur Nusantara</span
+          >
+        </a>
+
+        <ul class="nav-menu hidden lg:flex items-center gap-8 font-medium" id="navMenu">
+          <li>
+            <a
+              href="../../index.html"
+              class="hover:text-primary transition-colors"
+              >Beranda</a
+            >
+          </li>
+          <li><a href="./menu.html" class="text-primary font-bold">Menu</a></li>
+          <li>
+            <a href="./about.html" class="hover:text-primary transition-colors"
+              >Tentang</a
+            >
+          </li>
+          <li>
+            <a
+              href="./contact.html"
+              class="hover:text-primary transition-colors"
+              >Kontak</a
+            >
+          </li>
+          <li>
+            <a
+              href="./booking.html"
+              class="px-6 py-2 bg-primary text-white rounded-full transition-all shadow-md font-semibold hover:bg-dark"
+            >
+              Reservasi
+            </a>
+          </li>
+        </ul>
+
+        <div class="flex items-center gap-5">
+          <button class="text-xl hover:text-primary transition cursor-pointer">
+            <i class="fas fa-search"></i>
+          </button>
+          <a
+            href="./cart.html"
+            class="relative text-xl hover:text-primary transition"
+          >
+            <i class="fas fa-shopping-cart"></i>
+            <span
+              class="cart-count absolute -top-2 -right-2 bg-secondary text-dark text-[10px] font-bold px-1.5 rounded-full"
+              >0</span
+            >
+          </a>
+          <button id="menuToggle" class="lg:hidden text-2xl cursor-pointer">
+            <i class="fas fa-bars"></i>
+          </button>
+        </div>
+      </nav>
+    </header>
+
+    <section class="pt-32 pb-16 bg-white border-b border-gray-100">
+      <div class="container mx-auto px-4 text-center">
+        <h1
+          class="text-4xl md:text-5xl font-['Playfair_Display'] font-black text-dark mb-4"
+        >
+          Jelajahi Rasa Nusantara
+        </h1>
+        <p class="text-gray-500 max-w-2xl mx-auto mb-6">
+          Dari rempah pilihan hingga teknik memasak tradisional, setiap hidangan
+          kami bercerita tentang kekayaan budaya Indonesia.
+        </p>
+        <nav
+          class="flex justify-center gap-2 text-sm text-gray-400 font-medium italic"
+        >
+          <a href="../../index.html" class="hover:text-primary">Beranda</a>
+          <span>/</span>
+          <span class="text-primary">Daftar Menu</span>
+        </nav>
+      </div>
+    </section>
+
+    <section
+      class="py-8 bg-white sticky top-[72px] z-50 shadow-sm border-b border-gray-50"
+    >
+      <div class="container mx-auto px-4">
+        <div
+          class="flex flex-col lg:flex-row justify-between items-center gap-6"
+        >
+          <div
+            class="flex items-center gap-2 overflow-x-auto pb-2 lg:pb-0 w-full lg:w-auto no-scrollbar"
+          >
+            <button
+              class="px-6 py-2.5 bg-primary text-white rounded-full font-bold text-sm whitespace-nowrap shadow-lg shadow-primary/20 transition-all active-filter cursor-pointer"
+            >
+              <i class="fas fa-th mr-2"></i> Semua
+            </button>
+            <button
+              class="px-6 py-2.5 bg-gray-100 text-gray-600 hover:bg-secondary hover:text-dark rounded-full font-bold text-sm whitespace-nowrap transition-all cursor-pointer"
+            >
+              <i class="fas fa-drumstick-bite mr-2"></i> Makanan
+            </button>
+            <button
+              class="px-6 py-2.5 bg-gray-100 text-gray-600 hover:bg-secondary hover:text-dark rounded-full font-bold text-sm whitespace-nowrap transition-all cursor-pointer"
+            >
+              <i class="fas fa-mug-hot mr-2"></i> Minuman
+            </button>
+            <button
+              class="px-6 py-2.5 bg-gray-100 text-gray-600 hover:bg-secondary hover:text-dark rounded-full font-bold text-sm whitespace-nowrap transition-all cursor-pointer"
+            >
+              <i class="fas fa-cookie-bite mr-2"></i> Snack
+            </button>
+            <button
+              class="px-6 py-2.5 bg-gray-100 text-gray-600 hover:bg-secondary hover:text-dark rounded-full font-bold text-sm whitespace-nowrap transition-all cursor-pointer"
+            >
+              <i class="fas fa-ice-cream mr-2"></i> Dessert
+            </button>
+          </div>
+
+          <div
+            class="flex items-center gap-3 w-full lg:w-auto border-t lg:border-t-0 pt-4 lg:pt-0"
+          >
+            <span class="text-sm font-bold text-dark hidden sm:inline"
+              >Urutkan:</span
+            >
+            <select
+              id="sortSelect"
+              class="bg-gray-50 border border-gray-100 text-sm font-semibold rounded-xl px-4 py-2.5 outline-none focus:ring-2 focus:ring-primary/10 flex-grow lg:flex-grow-0"
+            >
+              <option value="default">Terpopuler</option>
+              <option value="price-low">Harga: Rendah ke Tinggi</option>
+              <option value="price-high">Harga: Tinggi ke Rendah</option>
+              <option value="rating">Rating Tertinggi</option>
+            </select>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="py-16 bg-gray-50">
+      <div class="container mx-auto px-4">
+        <div class="flex justify-between items-center mb-10">
+          <p class="text-gray-500 font-medium">
+            Menampilkan
+            <span id="menuCount" class="text-dark font-bold">12</span> pilihan
+            menu terbaik
+          </p>
+        </div>
+
+        <div
+          class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8"
+          id="menuContainer"
+        >
+          <div
+            class="group bg-white rounded-[2rem] overflow-hidden shadow-sm hover:shadow-xl transition-all duration-500 border border-gray-100 relative"
+          >
+            <div class="relative overflow-hidden h-64">
+              <img
+                src="https://images.unsplash.com/photo-1541529086526-db283c563270?auto=format&fit=crop&q=80&w=800"
+                alt="Rendang"
+                class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
+              />
+              <div
+                class="absolute top-4 right-4 bg-white/90 backdrop-blur px-3 py-1 rounded-full text-xs font-bold text-primary shadow-sm"
+              >
+                <i class="fas fa-star mr-1"></i> 4.9
+              </div>
+            </div>
+            <div class="p-6">
+              <span
+                class="text-[10px] font-black uppercase tracking-widest text-primary mb-2 block"
+                >Makanan Utama</span
+              >
+              <h3
+                class="text-xl font-bold text-dark mb-2 group-hover:text-primary transition-colors"
+              >
+                Rendang Sapi Premium
+              </h3>
+              <p class="text-gray-400 text-sm mb-6 line-clamp-2">
+                Daging sapi pilihan yang dimasak perlahan dengan santan dan
+                rempah asli Minang.
+              </p>
+              <div
+                class="flex items-center justify-between pt-4 border-t border-gray-50"
+              >
+                <span class="text-lg font-black text-dark">Rp 45.000</span>
+                <button
+                  class="w-10 h-10 bg-secondary text-dark rounded-xl flex items-center justify-center hover:bg-primary hover:text-white transition-all shadow-sm active:scale-95 cursor-pointer"
+                >
+                  <i class="fas fa-plus"></i>
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <div
+            class="group bg-white rounded-[2rem] overflow-hidden shadow-sm hover:shadow-xl transition-all duration-500 border border-gray-100"
+          >
+            <div class="relative overflow-hidden h-64">
+              <img
+                src="https://images.unsplash.com/photo-1596797038530-2c39fa802279?auto=format&fit=crop&q=80&w=800"
+                alt="Soto"
+                class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
+              />
+              <div
+                class="absolute top-4 right-4 bg-white/90 backdrop-blur px-3 py-1 rounded-full text-xs font-bold text-primary shadow-sm"
+              >
+                <i class="fas fa-star mr-1"></i> 4.8
+              </div>
+            </div>
+            <div class="p-6">
+              <span
+                class="text-[10px] font-black uppercase tracking-widest text-primary mb-2 block"
+                >Makanan Utama</span
+              >
+              <h3
+                class="text-xl font-bold text-dark mb-2 group-hover:text-primary transition-colors"
+              >
+                Soto Ayam Lamongan
+              </h3>
+              <p class="text-gray-400 text-sm mb-6 line-clamp-2">
+                Kuah kuning gurih dengan taburan koya yang melimpah dan ayam
+                suwir pilihan.
+              </p>
+              <div
+                class="flex items-center justify-between pt-4 border-t border-gray-50"
+              >
+                <span class="text-lg font-black text-dark">Rp 28.000</span>
+                <button
+                  class="w-10 h-10 bg-secondary text-dark rounded-xl flex items-center justify-center hover:bg-primary hover:text-white transition-all shadow-sm cursor-pointer"
+                >
+                  <i class="fas fa-plus"></i>
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <div
+            class="group bg-white rounded-[2rem] overflow-hidden shadow-sm hover:shadow-xl transition-all duration-500 border border-gray-100"
+          >
+            <div class="relative overflow-hidden h-64">
+              <img
+                src="https://images.unsplash.com/photo-1504674900247-0877df9cc836?auto=format&fit=crop&q=80&w=800"
+                alt="Es Cendol"
+                class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
+              />
+              <div
+                class="absolute top-4 left-4 bg-red-500 text-white px-3 py-1 rounded-full text-[10px] font-bold uppercase tracking-tighter shadow-lg"
+              >
+                Bestseller
+              </div>
+            </div>
+            <div class="p-6">
+              <span
+                class="text-[10px] font-black uppercase tracking-widest text-primary mb-2 block"
+                >Minuman</span
+              >
+              <h3
+                class="text-xl font-bold text-dark mb-2 group-hover:text-primary transition-colors"
+              >
+                Es Cendol Durian
+              </h3>
+              <p class="text-gray-400 text-sm mb-6 line-clamp-2">
+                Perpaduan manisnya gula merah asli, santan, dan topping durian
+                premium.
+              </p>
+              <div
+                class="flex items-center justify-between pt-4 border-t border-gray-50"
+              >
+                <span class="text-lg font-black text-dark">Rp 22.000</span>
+                <button
+                  class="w-10 h-10 bg-secondary text-dark rounded-xl flex items-center justify-center hover:bg-primary hover:text-white transition-all shadow-sm cursor-pointer"
+                >
+                  <i class="fas fa-plus"></i>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="py-12 bg-primary">
+      <div class="container mx-auto px-4">
+        <div
+          class="flex flex-col md:flex-row items-center justify-between gap-8 bg-white/10 p-8 md:p-12 rounded-[2.5rem] backdrop-blur-sm border border-white/20"
+        >
+          <div class="text-center md:text-left">
+            <h2 class="text-3xl font-bold text-white mb-2">
+              🎉 Promo Spesial Hari Ini!
+            </h2>
+            <p class="text-white/80">
+              Dapatkan gratis ongkir khusus pemesanan via website minimal Rp
+              100.000
+            </p>
+          </div>
+          <a
+            href="./cart.html"
+            class="px-10 py-5 bg-secondary text-dark font-black rounded-2xl hover:scale-105 transition shadow-xl shadow-black/10"
+          >
+            <i class="fas fa-shopping-cart mr-2"></i> Pesan Sekarang
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <footer class="bg-dark text-gray-400 pt-20 pb-10">
+      <div class="container mx-auto px-4 text-center">
+        <div
+          class="flex items-center justify-center gap-2 text-2xl font-bold text-white mb-6"
+        >
+          <i class="fas fa-utensils text-primary"></i>
+          <span class="font-['Playfair_Display']">Dapur Nusantara</span>
+        </div>
+        <p class="max-w-md mx-auto mb-10">
+          Menyajikan makanan rumahan dengan cita rasa autentik Indonesia sejak
+          tahun 2010.
+        </p>
+        <div class="flex justify-center gap-5 mb-16">
+          <a
+            href="#"
+            class="w-12 h-12 bg-white/5 rounded-full flex items-center justify-center hover:bg-primary hover:text-white transition-all"
+            ><i class="fab fa-instagram text-xl"></i
+          ></a>
+          <a
+            href="#"
+            class="w-12 h-12 bg-white/5 rounded-full flex items-center justify-center hover:bg-primary hover:text-white transition-all"
+            ><i class="fab fa-facebook-f text-xl"></i
+          ></a>
+          <a
+            href="#"
+            class="w-12 h-12 bg-white/5 rounded-full flex items-center justify-center hover:bg-primary hover:text-white transition-all"
+            ><i class="fab fa-whatsapp text-xl"></i
+          ></a>
+        </div>
+        <div class="pt-10 border-t border-white/5 text-sm">
+          <p>&copy; 2026 Dapur Nusantara. Dibuat dengan ❤️ untuk Indonesia</p>
+        </div>
+      </div>
+    </footer>
+
+     <button
+      id="scrollTop"
+      class="fixed bottom-8 right-8 w-14 h-14 bg-primary text-white rounded-full shadow-2xl flex items-center justify-center opacity-0 invisible translate-y-10 transition-all duration-300 z-[999] hover:-translate-y-2 cursor-pointer"
+    >
+      <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <script src="../js/main.js"></script>
+    <script src="../js/menu.js"></script>
+    
+  </body>
+</html>

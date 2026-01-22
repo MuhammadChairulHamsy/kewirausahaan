@@ -1,0 +1,148 @@
+@import "tailwindcss";
+
+/* ============================================
+   DAPUR NUSANTARA - TAILWIND V4 CONFIG
+   ============================================ */
+
+@theme {
+  /* Colors */
+  --color-primary: #ff6b6b;
+  --color-secondary: #feca57;
+  --color-dark: #2d3436;
+  --color-success: #4caf50;
+  
+  /* Gradients */
+  --bg-gradient-primary: linear-gradient(135deg, #ff6b6b 0%, #feca57 100%);
+  --bg-gradient-about: linear-gradient(135deg, #f8f9fa 0%, #ffffff 100%);
+
+  /* Spacing & Radius */
+  --radius-xl: 20px;
+  --radius-full: 9999px;
+  
+  /* Custom Breakpoints */
+  --breakpoint-xxl: 1400px;
+
+  /* Keyframes (From File 2) */
+  @keyframes fade-in-up {
+    from { opacity: 0; transform: translateY(30px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+  @keyframes float {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-20px); }
+  }
+  @keyframes heartbeat {
+    0%, 100% { transform: scale(1); }
+    10%, 30% { transform: scale(0.9); }
+    20%, 40% { transform: scale(1.1); }
+  }
+  @keyframes glow {
+    0%, 100% { box-shadow: 0 0 5px rgba(255, 107, 107, 0.5); }
+    50% { box-shadow: 0 0 20px rgba(255, 107, 107, 0.8); }
+  }
+  @keyframes spin-slow {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+  }
+
+  /* Register Animations to Utilities */
+  --animate-fade-up: fade-in-up 0.6s ease-out;
+  --animate-float: float 3s ease-in-out infinite;
+  --animate-heartbeat: heartbeat 1.5s ease-in-out infinite;
+  --animate-glow: glow 2s ease infinite;
+}
+
+/* ============================================
+   COMPONENTS LAYER (From File 1 & 3)
+   ============================================ */
+@layer components {
+  /* Menu Card System */
+  .menu-card {
+    @apply bg-white rounded-xl overflow-hidden shadow-md transition-all duration-300 
+           hover:-translate-y-2 hover:shadow-xl;
+  }
+
+  .menu-card-image {
+    @apply w-full h-[220px] relative overflow-hidden bg-gray-100;
+  }
+
+  .menu-card-image img {
+    @apply w-full h-full object-cover transition-transform duration-500 group-hover:scale-110;
+  }
+
+  /* Badges */
+  .menu-badge {
+    @apply absolute top-4 left-4 px-4 py-2 rounded-full text-[0.75rem] 
+           font-bold uppercase z-[2] backdrop-blur-md;
+  }
+
+  .badge-bestseller { @apply bg-primary/90 text-white; }
+  .badge-new { @apply bg-success/90 text-white; }
+
+  /* Buttons */
+  .btn-add-cart {
+    @apply flex items-center gap-2 px-6 py-3 bg-gradient-to-r from-primary to-secondary 
+           text-white rounded-full font-semibold transition-transform hover:scale-105 shadow-md;
+  }
+
+  /* Stats Box (About Section) */
+  .stat-box {
+    @apply bg-white p-8 rounded-2xl flex items-center gap-5 shadow-sm 
+           border-2 border-transparent transition-all hover:-translate-y-1 
+           hover:border-primary/30 hover:shadow-lg;
+  }
+
+  .stat-number {
+    @apply text-4xl font-extrabold bg-gradient-to-br from-primary to-secondary 
+           bg-clip-text text-transparent leading-none;
+  }
+
+  /* Navigation Mobile (From File 4) */
+  .nav-menu {
+    @apply fixed top-0 -right-full w-[280px] h-screen bg-white flex flex-col 
+           p-10 shadow-2xl transition-all duration-300 z-[1001]
+           lg:static lg:flex-row lg:h-auto lg:w-auto lg:shadow-none lg:p-0 lg:right-0;
+  }
+
+  .nav-menu.show {
+    @apply right-0;
+  }
+
+  /* Form Elements */
+  .form-group input, .form-group textarea {
+    @apply w-full px-4 py-3 border-2 border-gray-200 rounded-lg transition-all
+           focus:outline-none focus:border-primary focus:ring-1 focus:ring-primary;
+  }
+}
+
+/* ============================================
+   UTILITIES LAYER (Custom CSS Helpers)
+   ============================================ */
+@layer utilities {
+  .text-shadow-sm {
+    text-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  }
+  
+  .animate-on-scroll {
+    @apply opacity-0 translate-y-8 transition-all duration-700 ease-out;
+  }
+
+  .animate-on-scroll.animated {
+    @apply opacity-100 translate-y-0;
+  }
+}
+
+/* ============================================
+   PRINT & ACCESSIBILITY (From File 4)
+   ============================================ */
+@media print {
+  .no-print { display: none !important; }
+  .menu-card { break-inside: avoid; border: 1px solid #ddd; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
+  }
+}

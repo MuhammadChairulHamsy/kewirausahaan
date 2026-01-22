@@ -1,0 +1,312 @@
+<!doctype html>
+<html lang="id" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Hubungi Kami - Dapur Nusantara</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&family=Playfair+Display:wght@700;900&display=swap"
+      rel="stylesheet"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
+
+    <link rel="stylesheet" href="../css/output.css" />
+  </head>
+  <body class="font-['Poppins'] text-dark bg-gray-50 overflow-x-hidden">
+    <header
+      class="fixed w-full z-[1000] transition-all duration-300 shadow-sm bg-white"
+      id="header"
+    >
+      <nav
+        class="container mx-auto px-4 py-4 flex justify-between items-center"
+      >
+        <a
+          href="../../index.html"
+          class="flex items-center gap-2 text-2xl font-bold text-primary"
+        >
+          <i class="fas fa-utensils"></i>
+          <span class="font-['Playfair_Display'] text-dark"
+            >Dapur Nusantara</span
+          >
+        </a>
+
+        <ul
+          class="nav-menu hidden lg:flex items-center gap-8 font-medium"
+          id="navMenu"
+        >
+          <li>
+            <a
+              href="../../index.html"
+              class="hover:text-primary transition-colors"
+              >Beranda</a
+            >
+          </li>
+          <li><a href="./menu.html" class="text-primary font-bold">Menu</a></li>
+          <li>
+            <a href="./about.html" class="hover:text-primary transition-colors"
+              >Tentang</a
+            >
+          </li>
+          <li>
+            <a
+              href="./contact.html"
+              class="hover:text-primary transition-colors"
+              >Kontak</a
+            >
+          </li>
+          <li>
+            <a
+              href="./booking.html"
+              class="px-6 py-2 bg-primary text-white rounded-full transition-all shadow-md font-semibold hover:bg-dark"
+            >
+              Reservasi
+            </a>
+          </li>
+        </ul>
+
+        <div class="flex items-center gap-5">
+          <button class="text-xl hover:text-primary transition">
+            <i class="fas fa-search"></i>
+          </button>
+          <a
+            href="./cart.html"
+            class="relative text-xl hover:text-primary transition"
+          >
+            <i class="fas fa-shopping-cart"></i>
+            <span
+              class="absolute -top-2 -right-2 bg-secondary text-dark text-[10px] font-bold px-1.5 rounded-full"
+              >0</span
+            >
+          </a>
+          <button id="menuToggle" class="lg:hidden text-2xl">
+            <i class="fas fa-bars"></i>
+          </button>
+        </div>
+      </nav>
+    </header>
+
+    <section class="pt-32 pb-16 bg-white border-b border-gray-100">
+      <div class="container mx-auto px-4 text-center">
+        <h1
+          class="text-4xl md:text-5xl font-['Playfair_Display'] font-black text-dark mb-4"
+        >
+          Hubungi Kami
+        </h1>
+        <p class="text-gray-500 max-w-2xl mx-auto mb-6">
+          Punya pertanyaan atau ingin memberikan saran? Kami sangat senang
+          mendengar cerita Anda.
+        </p>
+        <nav
+          class="flex justify-center gap-2 text-sm text-gray-400 font-medium italic"
+        >
+          <a href="../../index.html" class="hover:text-primary">Beranda</a>
+          <span>/</span>
+          <span class="text-primary">Kontak</span>
+        </nav>
+      </div>
+    </section>
+
+    <section class="py-20 bg-gray-50">
+      <div class="container mx-auto px-4">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
+          <div class="lg:col-span-5 space-y-6">
+            <h2
+              class="text-3xl font-['Playfair_Display'] font-bold text-dark mb-8"
+            >
+              Informasi Kontak
+            </h2>
+
+            <div
+              class="bg-white p-6 rounded-3xl shadow-sm border border-gray-100 flex items-start gap-5 hover:shadow-lg transition-shadow duration-300"
+            >
+              <div
+                class="w-14 h-14 bg-secondary/30 text-primary rounded-2xl flex items-center justify-center text-xl shrink-0"
+              >
+                <i class="fas fa-map-marker-alt"></i>
+              </div>
+              <div>
+                <h3 class="font-bold text-dark mb-1">Lokasi Resto</h3>
+                <p class="text-gray-500 text-sm leading-relaxed">
+                  Jl. Jenderal Sudirman No. 123, Binjai, Sumatera Utara 20714
+                </p>
+              </div>
+            </div>
+
+            <div
+              class="bg-white p-6 rounded-3xl shadow-sm border border-gray-100 flex items-start gap-5 hover:shadow-lg transition-shadow duration-300"
+            >
+              <div
+                class="w-14 h-14 bg-secondary/30 text-primary rounded-2xl flex items-center justify-center text-xl shrink-0"
+              >
+                <i class="fas fa-phone"></i>
+              </div>
+              <div>
+                <h3 class="font-bold text-dark mb-1">Telepon & WhatsApp</h3>
+                <p class="text-gray-500 text-sm leading-relaxed">
+                  0811-1111-1111 (WhatsApp)<br />061-1111111 (Kantor)
+                </p>
+              </div>
+            </div>
+
+            <div
+              class="bg-white p-6 rounded-3xl shadow-sm border border-gray-100 flex items-start gap-5 hover:shadow-lg transition-shadow duration-300"
+            >
+              <div
+                class="w-14 h-14 bg-secondary/30 text-primary rounded-2xl flex items-center justify-center text-xl shrink-0"
+              >
+                <i class="fas fa-envelope"></i>
+              </div>
+              <div>
+                <h3 class="font-bold text-dark mb-1">Email Resmi</h3>
+                <p class="text-gray-500 text-sm leading-relaxed">
+                  info@dapurnusantara.com<br />support@dapurnusantara.com
+                </p>
+              </div>
+            </div>
+
+            <div
+              class="bg-primary p-8 rounded-[2rem] shadow-xl shadow-primary/20 text-white overflow-hidden relative group"
+            >
+              <div class="relative z-10">
+                <h3 class="text-xl font-bold mb-2">Respon Cepat?</h3>
+                <p class="text-white/80 text-sm mb-6">
+                  Hubungi kami melalui WhatsApp untuk respon instan dalam
+                  hitungan menit.
+                </p>
+                <a
+                  href="https://wa.me/6281111111111"
+                  target="_blank"
+                  class="inline-flex items-center gap-2 bg-white text-primary px-6 py-3 rounded-xl font-bold hover:bg-secondary hover:text-dark transition-all"
+                >
+                  <i class="fab fa-whatsapp text-lg"></i>
+                  Chat Sekarang
+                </a>
+              </div>
+              <i
+                class="fab fa-whatsapp absolute -bottom-8 -right-8 text-white/10 text-[10rem] group-hover:scale-110 transition-transform duration-700"
+              ></i>
+            </div>
+          </div>
+
+          <div
+            class="lg:col-span-7 bg-white p-8 md:p-12 rounded-[2.5rem] shadow-xl shadow-gray-200/50 border border-gray-100"
+          >
+            <h2
+              class="text-3xl font-['Playfair_Display'] font-bold text-dark mb-2"
+            >
+              Kirim Pesan
+            </h2>
+            <p class="text-gray-400 mb-10">
+              Isi formulir di bawah ini, tim kami akan merespon dalam 1x24 jam.
+            </p>
+
+            <form id="contactForm" class="space-y-6">
+              <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <div class="space-y-2">
+                  <label class="text-sm font-bold text-dark ml-1"
+                    >Nama Lengkap</label
+                  >
+                  <input
+                    type="text"
+                    placeholder="Contoh: Budi Santoso"
+                    class="w-full px-5 py-4 bg-gray-50 border border-gray-100 rounded-2xl outline-none focus:ring-2 focus:ring-primary/20 focus:bg-white transition-all text-sm"
+                    required
+                  />
+                </div>
+                <div class="space-y-2">
+                  <label class="text-sm font-bold text-dark ml-1"
+                    >Email Aktif</label
+                  >
+                  <input
+                    type="email"
+                    placeholder="email@contoh.com"
+                    class="w-full px-5 py-4 bg-gray-50 border border-gray-100 rounded-2xl outline-none focus:ring-2 focus:ring-primary/20 focus:bg-white transition-all text-sm"
+                    required
+                  />
+                </div>
+              </div>
+
+              <div class="space-y-2">
+                <label class="text-sm font-bold text-dark ml-1">Subjek</label>
+                <select
+                  class="w-full px-5 py-4 bg-gray-50 border border-gray-100 rounded-2xl outline-none focus:ring-2 focus:ring-primary/20 focus:bg-white transition-all text-sm appearance-none"
+                >
+                  <option value="general">Pertanyaan Umum</option>
+                  <option value="reservation">Reservasi Meja</option>
+                  <option value="order">Masalah Pesanan</option>
+                  <option value="partnership">Kemitraan/UMKM</option>
+                </select>
+              </div>
+
+              <div class="space-y-2">
+                <label class="text-sm font-bold text-dark ml-1"
+                  >Pesan Anda</label
+                >
+                <textarea
+                  rows="5"
+                  placeholder="Tuliskan detail pertanyaan Anda..."
+                  class="w-full px-5 py-4 bg-gray-50 border border-gray-100 rounded-2xl outline-none focus:ring-2 focus:ring-primary/20 focus:bg-white transition-all text-sm resize-none"
+                  required
+                ></textarea>
+              </div>
+
+              <button
+                type="submit"
+                class="w-full bg-dark text-white font-bold py-5 rounded-2xl hover:bg-primary transition-all shadow-lg shadow-dark/10 active:scale-95 flex items-center justify-center gap-3"
+              >
+                <i class="fas fa-paper-plane text-sm"></i>
+                Kirim Pesan Sekarang
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section
+      class="h-[450px] w-full relative grayscale hover:grayscale-0 transition-all duration-700"
+    >
+      <iframe
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d127394.38576435951!2d98.4116568864746!3d3.6162584102237937!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x303126f505373a07%3A0x3039d80b220cc70!2sBinjai%2C%20Kota%20Binjai%2C%20Sumatera%20Utara!5e0!3m2!1sid!2sid!4v1700000000000"
+        class="w-full h-full border-0"
+        allowfullscreen=""
+        loading="lazy"
+      ></iframe>
+    </section>
+
+    <footer class="bg-dark text-gray-400 pt-20 pb-10 border-t border-white/5">
+      <div class="container mx-auto px-4 text-center">
+        <div
+          class="flex items-center justify-center gap-2 text-2xl font-bold text-white mb-6"
+        >
+          <i class="fas fa-utensils text-primary"></i>
+          <span class="font-['Playfair_Display']">Dapur Nusantara</span>
+        </div>
+        <p class="max-w-md mx-auto mb-10 text-sm">
+          Menyajikan makanan rumahan dengan cita rasa autentik Indonesia sejak
+          tahun 2010.
+        </p>
+        <div class="pt-10 border-t border-white/5 text-xs">
+          <p>&copy; 2026 Dapur Nusantara. Dibuat dengan ❤️ untuk Indonesia</p>
+        </div>
+      </div>
+    </footer>
+
+     <button
+      id="scrollTop"
+      class="fixed bottom-8 right-8 w-14 h-14 bg-primary text-white rounded-full shadow-2xl flex items-center justify-center opacity-0 invisible translate-y-10 transition-all duration-300 z-[999] hover:-translate-y-2 cursor-pointer"
+    >
+      <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <script src="../js/main.js"></script>
+    <script src="../js/contact.js"></script>
+  </body>
+</html>
